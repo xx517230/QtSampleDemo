@@ -16,11 +16,17 @@ public:
     ~Widget();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_btnGetChars_clicked();
 
-    void on_btnDec_clicked();
+    void on_btnClear_clicked();
 
-    void on_btnBin_clicked();
+    void on_btnCharJudge_clicked();
+
+    void on_btnConvLatin1_clicked();
+
+    void on_btnConvUTF16_clicked();
+
+    void on_btnCompare_clicked();
 
 private:
     Ui::Widget *ui;
