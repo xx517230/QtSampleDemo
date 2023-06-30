@@ -14,6 +14,15 @@ class Widget : public QWidget
 public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
+private slots:
+    void do_valueChanged(int value);
+    void on_chkTextVisible_clicked(bool checked);
+
+    void on_chkInvertedAppearance_clicked(bool checked);
+
+    void on_radioPercent_clicked();
+
+    void on_radioValue_clicked();
 
 private:
     Ui::Widget *ui;
