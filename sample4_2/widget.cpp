@@ -181,3 +181,63 @@ void Widget::on_btnReplace_clicked()
     ui->plainTextEdit->appendPlainText("str1 = "+ str1.replace(n+1,subStr.size(),QString("OK!")));
 }
 
+void Widget::on_btnIndexOfLastIndexOf_clicked()
+{
+        //indexOf()函数
+        QString str1,str2;
+        str1=ui->comboBoxStr1->currentText();
+        str2=ui->comboBoxStr2->currentText();
+        ui->plainTextEdit->appendPlainText("indexOf()/lastIndexOf()函数测试:");
+        ui->plainTextEdit->appendPlainText("str1="+str1);
+        ui->plainTextEdit->appendPlainText("str2="+str2);
+
+        int i;
+        //i=str1.indexOf(str2[0].unicode());
+        i=str1.indexOf(str2);
+        ui->plainTextEdit->appendPlainText(QString::asprintf("str1.indexOf(str2): %d",i));
+
+        //i=str1.lastIndexOf(str2[0].unicode());
+        i=str1.lastIndexOf(str2);
+        ui->plainTextEdit->appendPlainText(QString::asprintf("str1.lastIndexOf(str2): %d",i));
+}
+
+
+void Widget::on_btnEndsWithStatsWith_clicked()
+{
+        QString str1,str2;
+        str1=ui->comboBoxStr1->currentText();
+        str2=ui->comboBoxStr2->currentText();
+        ui->plainTextEdit->appendPlainText("startsWith()/endsWith()函数测试:");
+        ui->plainTextEdit->appendPlainText("str1="+str1);
+        ui->plainTextEdit->appendPlainText("str2="+str2);
+        //startsWith()函数
+        ui->plainTextEdit->appendPlainText("str1.startsWith(st2)="+(str1.startsWith(str2)?QString("true"):QString("false")));
+        //endsWith()函数
+        ui->plainTextEdit->appendPlainText("str1.endsWith(st2)="+(str1.endsWith(str2)?QString("true"):QString("false")));
+}
+
+
+void Widget::on_btnContains_clicked()
+{
+        //contains()函数
+        QString str1,str2;
+        str1=ui->comboBoxStr1->currentText();
+        str2=ui->comboBoxStr2->currentText();
+        ui->plainTextEdit->appendPlainText("contains()函数测试:");
+        ui->plainTextEdit->appendPlainText("str1="+str1);
+        ui->plainTextEdit->appendPlainText("str2="+str2);
+
+        ui->plainTextEdit->appendPlainText("str1.contains(st2)="+(str1.contains(str2)?QString("true"):QString("false")));
+}
+
+
+void Widget::on_btnCount_clicked()
+{
+    ui->plainTextEdit->appendPlainText("size()/count()/length()函数测试:");
+    QString str1 = ui->comboBoxStr1->currentText();
+    ui->plainTextEdit->appendPlainText("str1="+str1);
+    ui->plainTextEdit->appendPlainText(QString::asprintf("size=%lld",str1.size()));
+    ui->plainTextEdit->appendPlainText(QString::asprintf("count=%lld",str1.count()));
+    ui->plainTextEdit->appendPlainText(QString::asprintf("length=%lld",str1.length()));
+}
+

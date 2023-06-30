@@ -42,6 +42,14 @@ private slots:
 
     void on_btnReplace_clicked();
 
+    void on_btnIndexOfLastIndexOf_clicked();
+
+    void on_btnEndsWithStatsWith_clicked();
+
+    void on_btnContains_clicked();
+
+    void on_btnCount_clicked();
+
 private:
     Ui::Widget *ui;
 };
