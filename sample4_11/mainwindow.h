@@ -35,6 +35,18 @@ private slots:
 
     void on_listWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
 
+    void on_chkSortEnable_clicked(bool checked);
+
+    void on_tbtnAsc_clicked();
+
+    void on_tbtnDes_clicked();
+
+    void on_tbtnClearText_clicked();
+
+    void on_tbtnAddLine_clicked();
+
+    void on_listWidget_customContextMenuRequested(const QPoint &pos);
+
 private:
     Ui::MainWindow *ui;
 };

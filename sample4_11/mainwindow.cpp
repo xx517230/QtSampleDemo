@@ -74,7 +74,7 @@ void MainWindow::on_actListInit_triggered()
 
 void MainWindow::on_actListClear_triggered()
 {
-     ui->listWidget->clear();
+    ui->listWidget->clear();
 }
 
 
@@ -177,8 +177,60 @@ void MainWindow::on_listWidget_currentItemChanged(QListWidgetItem *current, QLis
             ui->editCurItemText->setText("前一项:"+previous->text()+" 当前项："+current->text());
         else
             ui->editCurItemText->setText("当前项："+current->text());
-    ui->plainTextEdit->appendPlainText("currentItemChanged()信号被发射");
+        ui->plainTextEdit->appendPlainText("currentItemChanged()信号被发射");
     }
 
+}
+
+
+void MainWindow::on_chkSortEnable_clicked(bool checked)
+{
+    ui->listWidget->setSortingEnabled(checked);
+}
+
+
+void MainWindow::on_tbtnAsc_clicked()
+{
+    if(ui->listWidget->isSortingEnabled())
+        ui->listWidget->sortItems(Qt::AscendingOrder);
+}
+
+
+void MainWindow::on_tbtnDes_clicked()
+{
+    if(ui->listWidget->isSortingEnabled())
+        ui->listWidget->sortItems(Qt::DescendingOrder);
+}
+
+
+void MainWindow::on_tbtnClearText_clicked()
+{
+    ui->plainTextEdit->clear();
+}
+
+
+void MainWindow::on_tbtnAddLine_clicked()
+{
+    ui->plainTextEdit->appendPlainText("~~~");
+}
+
+
+void MainWindow::on_listWidget_customContextMenuRequested(const QPoint &pos)
+{
+    Q_UNUSED(pos);
+
+    QMenu *menu = new QMenu();
+    menu->addAction(ui->actListInit);
+    menu->addAction(ui->actListClear);
+    menu->addAction(ui->actListInset);
+    menu->addAction(ui->actListAppend);
+    menu->addAction(ui->actListDelete);
+
+    menu->addAction(ui->actSelAll);
+    menu->addAction(ui->actSelectInserve);
+    menu->addAction(ui->actSelectNotAll);
+    menu->exec(QCursor::pos());
+
+    delete menu;
 }
 

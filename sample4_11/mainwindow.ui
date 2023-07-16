@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>695</width>
-    <height>505</height>
+    <width>898</width>
+    <height>514</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,15 +28,15 @@
         </size>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="page">
         <property name="geometry">
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>148</width>
-          <height>345</height>
+          <width>182</width>
+          <height>324</height>
          </rect>
         </property>
         <attribute name="icon">
@@ -132,8 +132,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>148</width>
-          <height>345</height>
+          <width>182</width>
+          <height>324</height>
          </rect>
         </property>
         <attribute name="icon">
@@ -196,6 +196,14 @@
         </layout>
        </widget>
        <widget class="QWidget" name="page_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>182</width>
+          <height>324</height>
+         </rect>
+        </property>
         <attribute name="icon">
          <iconset resource="res.qrc">
           <normaloff>:/image/icons/412.bmp</normaloff>:/image/icons/412.bmp</iconset>
@@ -306,6 +314,9 @@
         </item>
         <item>
          <widget class="QListWidget" name="listWidget">
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
           <item>
            <property name="text">
             <string>New Item</string>
