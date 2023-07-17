@@ -19,11 +19,27 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_btnRestore_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_btnClear_clicked();
 
-    void on_checkBox_clicked(bool checked);
+    void on_chkEnableEdit_clicked(bool checked);
+
+    void on_btnAddItem_clicked();
+
+    void on_btnInsertItem_clicked();
+
+    void on_btnMoveUp_clicked();
+
+    void on_btnMoveDown_clicked();
+
+    void on_btnSortItem_clicked(bool checked);
+
+    void on_btnCLearPlain_clicked();
+
+    void on_btnShow_clicked();
+
+    void on_listView_clicked(const QModelIndex &index);
 
 private:
     Ui::MainWindow *ui;
